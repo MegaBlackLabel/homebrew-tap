@@ -6,6 +6,7 @@ macOS 用の [Ligrol](https://ligrol.app/) を Homebrew で入れるための ta
 
 ```sh
 brew tap megablacklabel/tap
+brew trust megablacklabel/tap
 brew install --cask ligrol
 ```
 
