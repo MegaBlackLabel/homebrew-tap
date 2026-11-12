@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Audit cask
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           brew tap --force megablacklabel/tap "$GITHUB_WORKSPACE"
