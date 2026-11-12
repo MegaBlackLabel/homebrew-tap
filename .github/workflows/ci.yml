@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit cask
+        run: |
+          set -euo pipefail
+          brew tap --force megablacklabel/tap "$GITHUB_WORKSPACE"
+          brew audit --cask --online megablacklabel/tap/ligrol
+          brew style Casks/ligrol.rb
