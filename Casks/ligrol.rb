@@ -3,10 +3,10 @@ cask "ligrol" do
   sha256 arm:   "2a383a5523f7afb726947a5d32d2c5471324efd3248e64602f179c52e62f9f49",
          intel: "9b85d918beeb7921852fd4a3c52aabc813d59c69fce59560ce666db129abe38b"
 
+  arch arm: "aarch64", intel: "x86_64"
+
   url "https://github.com/MegaBlackLabel/ligrol-app/releases/download/v#{version}/ligrol-#{version}-#{arch}-macos.dmg",
       verified: "github.com/MegaBlackLabel/ligrol-app/"
-
-  arch arm: "aarch64", intel: "x86_64"
 
   name "Ligrol"
   desc "Desktop bookshelf and reader for purchased doujinshi"
