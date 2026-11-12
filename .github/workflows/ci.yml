@@ -15,5 +15,6 @@ jobs:
         run: |
           set -euo pipefail
           brew tap --force megablacklabel/tap "$GITHUB_WORKSPACE"
+          brew trust megablacklabel/tap
           brew audit --cask --online megablacklabel/tap/ligrol
           brew style Casks/ligrol.rb
